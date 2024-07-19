@@ -9,6 +9,8 @@ export default {
     colors: {
         primary: '#004AAD',
         secondary: '#F9F9F9',
+        titleFont: '#006cff',
+        normalFont: '#6f6f6f',
         footer:"#69C800",
       },
     },
