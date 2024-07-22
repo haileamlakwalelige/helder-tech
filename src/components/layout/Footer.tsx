@@ -23,8 +23,8 @@ const Footer = () => {
       };
 
     return (
-        <div style={divStyle} className='min-h-[60vh] py-10 overflow-x-hidden cri'>
-            <div className='flex w-full flex-wrap lg:flex-nowrap gap-8 items-center justify-center lg:justify-between bg-primary px-2 sm:px-6 md:px-12 lg:px-16 mx-2 sm:mx-6 md:mx-12 lg:mx-16 rounded-xl overflow-x-hidden'>
+        <div style={divStyle} className='min-h-[60vh] py-10 overflow-x-hidden cri w-screen flex flex-col items-center justify-center'>
+            <div className='flex w-[95%] flex-wrap lg:flex-nowrap gap-8 items-center justify-center lg:justify-between bg-primary px-2 sm:px-6 md:px-12 lg:px-16 mx-2 sm:mx-6 md:mx-12 lg:mx-16 rounded-xl overflow-x-hidden'>
                 <div className='lg:w-1/4'>
                     <img src={logo} alt="" className='w-[262px] h-[250px]' />
                 </div>
@@ -38,7 +38,7 @@ const Footer = () => {
 
 
             {/* second footer */}
-            <div className='flex gap-10 lg:gap-5 flex-col md:flex-row flex-wrap justify-center items-center  md:justify-between py-10 px-2 sm:px-6 md:px-12'>
+            <div className='flex gap-10 lg:gap-5 flex-col md:flex-row flex-wrap justify-center md:items-start items-center md:justify-between py-10 px-2 sm:px-6 md:px-12'>
                 
                 <div className='flex flex-col'>
                     <p className='text-primary font-bold cri text-[24px] pb-4 text-center'>Quick Link</p>
@@ -85,7 +85,7 @@ const Footer = () => {
                     <div className='ml-4 gap-1 flex flex-col'>
                         <div className='flex gap-3'>
                             <IoMdMailOpen className="text-primary" size={20}/>
-                            <p className='text-[#6B6B6B] cri text-[20px]'>info@heldertechnologie.com</p>
+                            <p className='text-[#6B6B6B] cri text-[20px]'>info@heldertechnologies.com</p>
                         </div>
                         <div  className='flex gap-3'>
                             <BiPhone className="text-primary" size={20}/>
