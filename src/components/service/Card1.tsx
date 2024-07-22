@@ -6,8 +6,8 @@ interface props {
 
 const Card1: React.FC<props> = (props) => {
   return (
-    <div className="p-[60px] bg-[#f9f9f9] rounded-[18px] flex flex-col items-center justify-center gap-[40px]">
-      <div className="w-[100%] flex items-center justify-evenly relative right-[20%]">
+    <div className="md:w-[329px] w-[300px] md:h-[305px] h-[275px] mb-[20px] p-[40px] bg-[#f9f9f9] rounded-[18px] flex flex-col items-center justify-center gap-[40px]">
+      <div className="w-[100%] flex items-center justify-evenly gap-3 relative md:right-[20%] right-[10%]">
         <img src={props.img} alt="" />
         <h2 className="text-primary text-[24px] text-center font-[600]">{props.title}</h2>
       </div>

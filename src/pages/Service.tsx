@@ -65,7 +65,7 @@ const frameworkData = [
 
 const Service = () => {
   return (
-    <div>
+    <div className="min-h-screen w-screen flex flex-col items-center justify-center gap-0">
       <ServiceHero />
       <ServiceSection1 data={engagementModelData} />
       <ServiceSection2 data={frameworkData} />
