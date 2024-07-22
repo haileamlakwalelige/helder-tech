@@ -31,8 +31,8 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 0 || window.innerWidth < 768;
-      console.log('is scrolled,', isScrolled);
-      console.log("window inner length", window.innerWidth);
+      // console.log('is scrolled,', isScrolled);
+      // console.log("window inner length", window.innerWidth);
       setScrolled(isScrolled);
     };
 

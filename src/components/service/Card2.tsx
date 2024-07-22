@@ -1,14 +1,18 @@
-const Card2 = () => {
-  return (
-    <div className="p-[20px] bg-white flex items-center justify-evenly rounded-[18px]">
-      <img src="./logos_nodejs.png" alt="" />
+interface props {
+  img: string;
+  title: string;
+  description: string;
+}
 
-      <div className="flex flex-col items-center justify-center">
-        <h2 className="text-[24px] text-[#006cff] font-[600px]">Node JS Development</h2>
-        <p className="w-[75%] text-[12px] text-[#6f6f6f] font-[400] ">
-          Node JS is a javascript-based server-side runtime environment,
-          offering unmatched superiority with unified code for both frontend and
-          backend.
+const Card2: React.FC<props> = (props) => {
+  return (
+    <div className="lg:w-[100%] w-[80%] p-[20px] bg-white grid md:grid-cols-2 sm:grid-cols-1 place-items-center rounded-[18px] gap-[20px]">
+      <img src={props.img} alt="" />
+
+      <div className="w-[100%] text-center flex flex-col md:items-start items-center justify-center gap-[10px]">
+        <h2 className="md:text-[24px] text-[18px] text-[#006cff] font-[600]">{props.title}</h2>
+        <p className="text-[12px] text-[#6f6f6f] text-justify font-[400] ">
+          {props.description}
         </p>
       </div>
     </div>
