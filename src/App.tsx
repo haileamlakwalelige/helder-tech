@@ -5,6 +5,7 @@ import Footer from "./components/layout/Footer";
 import About from "./pages/About";
 import Software from "./pages/Software";
 import Mobile from "./pages/Mobile";
+import DigitalMarketing from "./pages/DigitalMarketing";
 import ScrollToTop from "./ScrollToTop";
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/software" element={<Software />} />
           <Route path="/mobile" element={<Mobile />} />
+          <Route path="/digital-marketing" element={<DigitalMarketing />} />
         </Routes>
         <Footer />
       </BrowserRouter>
