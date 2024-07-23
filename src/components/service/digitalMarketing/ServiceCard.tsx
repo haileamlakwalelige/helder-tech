@@ -16,8 +16,8 @@ interface props {
 const ServiceCard: React.FC<props> = (props) => {
   return (
     <div className="w-[100%] md:h-[250px] min-h-[250px] p-[30px] bg-secondary flex flex-col items-center justify-center gap-[10px] rounded-[18px]">
-      <div className="w-full grid lg:grid-cols-[10%_90%] md:grid-cols-[20%_80%] place-items-center md:gap-[0px] gap-[20px]">
-        <img src={props.data.img} alt="" />
+      <div className="w-full flex md:flex-row flex-col items-center justify-start md:gap-[20px] gap-[20px]">
+        <img src={props.data.img} alt="" className="w-[70px] h-[70px]"/>
         <h2 className="text-[24px] text-titleFont md:text-justify text-center font-[600]">
           {props.data.title}
         </h2>
