@@ -3,7 +3,8 @@ import Home from "./pages/Home";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import About from "./pages/About";
-import Service from "./pages/Service";
+import Software from "./pages/Software";
+import Mobile from "./pages/Mobile";
 import ScrollToTop from "./ScrollToTop";
 
 export default function App() {
@@ -15,7 +16,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/service" element={<Service />} />
+          <Route path="/software" element={<Software />} />
+          <Route path="/mobile" element={<Mobile />} />
         </Routes>
         <Footer />
       </BrowserRouter>

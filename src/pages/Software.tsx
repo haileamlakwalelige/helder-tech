@@ -1,7 +1,7 @@
-import ServiceHero from "../components/service/ServiceHero";
-import ServiceSection1 from "../components/service/ServiceSection1";
-import ServiceSection2 from "../components/service/ServiceSection2";
-import GetNewProject from "../components/service/GetNewProject";
+import ServiceHero from "../components/service/software/SoftwareHero";
+import SoftwareSection1 from "../components/service/software/SoftwareSection1";
+import SoftwareSection2 from "../components/reusables/Section2";
+import GetNewProject from "../components/reusables/GetNewProject";
 
 const engagementModelData = [
   {
@@ -67,8 +67,8 @@ const Service = () => {
   return (
     <div className="min-h-screen w-screen flex flex-col items-center justify-center gap-0">
       <ServiceHero />
-      <ServiceSection1 data={engagementModelData} />
-      <ServiceSection2 data={frameworkData} />
+      <SoftwareSection1 data={engagementModelData} />
+      <SoftwareSection2 data={frameworkData} />
       <div className="w-screen flex items-center justify-center">
         <GetNewProject />
       </div>
