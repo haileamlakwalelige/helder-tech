@@ -1,4 +1,4 @@
-import heroImg from "../../assets/serviceHeroImg.jpg";
+import heroImg from "../../../assets/serviceHeroImg.jpg";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const ServiceHero = () => {

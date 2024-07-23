@@ -1,13 +1,13 @@
 import Card2 from "./Card2";
 
-interface frameworkData {
+interface sectionData {
   img: string;
   title: string;
   description: string;
 }
 
 interface props {
-  data: frameworkData[];
+  data: sectionData[];
 }
 
 const ServiceSection2: React.FC<props> = (props) => {
