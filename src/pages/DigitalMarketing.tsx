@@ -1,5 +1,7 @@
 import DigitalMarketingHero from "../components/service/digitalMarketing/DigitalMarketingHero";
 import ServiceCard from "../components/service/digitalMarketing/ServiceCard";
+import Benefits from "../components/service/digitalMarketing/Benefits";
+import GetNewProject from "../components/reusables/GetNewProject";
 
 const serviceData = [
   {
@@ -61,16 +63,70 @@ const serviceData = [
   },
 ];
 
+const benefitData = [
+  {
+    img: "ptpt.png",
+    title: "Precise Targeting and Performance Tracking",
+    details: [
+      {
+        title: "Targeted Reach: ",
+        description:
+          "Reach your target audience with precision targeting and personalized messaging.",
+      },
+      {
+        title: "Measurable Results:  ",
+        description:
+          "Track and analyze campaign performance in real-time to measure ROI and optimize strategies for better results.",
+      },
+    ],
+  },
+
+  {
+    img: "cess.png",
+    title: "Cost-Effective Solutions and Scalability",
+    details: [
+      {
+        title: "Cost-Effectiveness: ",
+        description:
+          "Maximize your marketing budget with cost-effective digital marketing solutions that deliver tangible results.",
+      },
+      {
+        title: "Scalability:  ",
+        description:
+          " Scale your digital marketing efforts up or down based on your business needs and objectives.",
+      },
+    ],
+  },
+
+  {
+    img: "ebva.png",
+    title: "Enhanced Brand Visibility and Authority",
+    details: [
+      {
+        title: "Brand Awareness: ",
+        description:
+          " Increase brand visibility and awareness across digital channels, establishing your brand as an authority in your industry.",
+      },
+    ],
+  },
+];
+
 const DigitalMarketing = () => {
   return (
     <div>
       <DigitalMarketingHero />
+
       <h2 className="mt-[35px] text-titleFont text-[32px] text-center font-[700]">
         Our Service Include
       </h2>
-      <div className="w-[80%] my-[35px] mx-auto grid lg:grid-cols-2 grid-cols-1 place-items-center md:gap-[9.7%] gap-[40px]">
-        {serviceData.map(item => <ServiceCard data={item} />)}
+      <div className="w-[80%] mx-auto grid lg:grid-cols-2 grid-cols-1 place-items-center md:gap-x-[9.7%] gap-[40px]">
+        {serviceData.map((item) => (
+          <ServiceCard data={item} />
+        ))}
       </div>
+
+      <Benefits data={benefitData} />
+      <GetNewProject />
     </div>
   );
 };
