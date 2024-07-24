@@ -1,6 +1,7 @@
 import DigitalMarketingHero from "../components/service/digitalMarketing/DigitalMarketingHero";
 import ServiceCard from "../components/service/digitalMarketing/ServiceCard";
 import Benefits from "../components/service/digitalMarketing/Benefits";
+import GetNewProject from "../components/reusables/GetNewProject";
 
 const serviceData = [
   {
@@ -125,6 +126,7 @@ const DigitalMarketing = () => {
       </div>
 
       <Benefits data={benefitData} />
+      <GetNewProject />
     </div>
   );
 };
