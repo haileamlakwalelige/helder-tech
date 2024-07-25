@@ -12,7 +12,7 @@ interface props {
 
 const SoftwareSection1: React.FC<props> = (props) => {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="z-10 flex flex-col items-center justify-center">
       <h2 className="mb-[35px] md:text-[32px] text-[25px] text-primary text-center font-[700]">
         Engagement Models
       </h2>

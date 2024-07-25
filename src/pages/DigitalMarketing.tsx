@@ -131,8 +131,16 @@ const DigitalMarketing = () => {
           alt=""
           className="z-0 absolute lg:top-[-5%] top-0 left-0 md:visible invisible"
         />
-        <img src="serviceDecoration2.png" alt="" className="z-0 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]" />
-        <img src="serviceDecoration3.png" alt="" className="z-0 absolute bottom-[-5%] right-0 md:visible invisible" />
+        <img
+          src="serviceDecoration2.png"
+          alt=""
+          className="z-0 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
+        />
+        <img
+          src="serviceDecoration3.png"
+          alt=""
+          className="z-0 absolute bottom-[-5%] right-0 md:visible invisible"
+        />
       </div>
 
       <Benefits data={benefitData} />
