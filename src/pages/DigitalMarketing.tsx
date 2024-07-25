@@ -116,7 +116,7 @@ const DigitalMarketing = () => {
     <div>
       <DigitalMarketingHero />
 
-      <h2 className="mt-[35px] text-titleFont text-[32px] text-center font-[700]">
+      <h2 className="my-[35px] text-titleFont text-[32px] text-center font-[700]">
         Our Service Include
       </h2>
       <div className="w-[80%] mx-auto grid lg:grid-cols-2 grid-cols-1 place-items-center md:gap-x-[9.7%] gap-[40px]">
