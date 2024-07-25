@@ -68,7 +68,7 @@ const Service = () => {
     <div className="min-h-screen w-screen flex flex-col items-center justify-center gap-0">
       <ServiceHero />
       <SoftwareSection1 data={engagementModelData} />
-      <SoftwareSection2 data={frameworkData} />
+      <SoftwareSection2 title="Web Frameworks We Use" data={frameworkData} />
       <div className="w-screen flex items-center justify-center">
         <GetNewProject />
       </div>
