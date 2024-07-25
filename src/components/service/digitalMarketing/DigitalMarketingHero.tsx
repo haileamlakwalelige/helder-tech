@@ -7,7 +7,7 @@ const DigitalMarketingHero = () => {
       <img
         src={heroImg}
         alt=""
-        className="w-[100%] lg:min-h-[636px] min-h-[480px] object-cover"
+        className="w-[100%] z-20 lg:min-h-[636px] min-h-[480px] object-cover"
       />
 
       <div className="absolute lg:top-[306px] top-[100px] lg:left-[76px] flex flex-col lg:items-start items-center md:gap-[28px] gap-[10px]">

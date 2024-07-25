@@ -21,7 +21,7 @@ const Benefits: React.FC<props> = (props) => {
             <h2 className="mb-[20px] text-titleFont text-[32px] text-center font-[700] relative bottom-[20px]">Key Benefits</h2>
             
             <div className="w-full flex lg:flex-row flex-col items-center justify-between gap-[30px]">
-                {props.data.map(item => <BenefitItem img={item.img} title={item.title} detail={item.details} />)}
+                {props.data.map(item => <BenefitItem key={item.img} img={item.img} title={item.title} detail={item.details} />)}
             </div>
         </div>
     );

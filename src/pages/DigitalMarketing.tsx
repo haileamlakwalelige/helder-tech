@@ -116,13 +116,31 @@ const DigitalMarketing = () => {
     <div>
       <DigitalMarketingHero />
 
-      <h2 className="my-[35px] text-titleFont text-[32px] text-center font-[700]">
-        Our Service Include
-      </h2>
-      <div className="w-[80%] mx-auto grid lg:grid-cols-2 grid-cols-1 place-items-center md:gap-x-[9.7%] gap-[40px]">
-        {serviceData.map((item) => (
-          <ServiceCard data={item} />
-        ))}
+      <div className="w-full relative">
+        <h2 className="my-[35px] text-titleFont text-[32px] text-center font-[700]">
+          Our Service Include
+        </h2>
+        <div className="w-[80%] mx-auto grid lg:grid-cols-2 grid-cols-1 place-items-center md:gap-x-[9.7%] gap-[40px]">
+          {serviceData.map((item) => (
+            <ServiceCard key={item.img} data={item} />
+          ))}
+        </div>
+
+        <img
+          src="serviceDecoration1.png"
+          alt=""
+          className="z-0 absolute lg:top-[-5%] top-0 left-0 md:visible invisible"
+        />
+        <img
+          src="serviceDecoration2.png"
+          alt=""
+          className="z-0 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
+        />
+        <img
+          src="serviceDecoration3.png"
+          alt=""
+          className="z-0 absolute bottom-[-5%] right-0 md:visible invisible"
+        />
       </div>
 
       <Benefits data={benefitData} />

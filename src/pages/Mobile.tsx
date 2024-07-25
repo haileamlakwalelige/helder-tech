@@ -53,7 +53,7 @@ const Mobile = () => {
     <div className="w-screen min-h-screen">
       <MobileHero />
       <MobileDetails data={mobileServices} />
-      <Section2 data={keyFeaturesData} />
+      <Section2 title="Key Features" data={keyFeaturesData} />
       <GetNewProject />
     </div>
   );
