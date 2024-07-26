@@ -7,6 +7,7 @@ import Software from "./pages/Software";
 import Mobile from "./pages/Mobile";
 import DigitalMarketing from "./pages/DigitalMarketing";
 import ScrollToTop from "./ScrollToTop";
+import PageNotFound from "./pages/PageNotFound";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="/software" element={<Software />} />
           <Route path="/mobile" element={<Mobile />} />
           <Route path="/digital-marketing" element={<DigitalMarketing />} />
+          <Route path="/*" element={<PageNotFound />}></Route>
         </Routes>
         <Footer />
       </BrowserRouter>
