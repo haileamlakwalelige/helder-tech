@@ -16,7 +16,7 @@ const MobileDetails: React.FC<props> = (props) => {
         Our Services Include
       </h2>
       <div className="w-screen flex lg:flex-row flex-col items-center justify-evenly">
-        {props.data.map(item => <MobileCard1 title={item.title} description={item.description} />)}
+        {props.data.map(item => <MobileCard1 key={item.title} title={item.title} description={item.description} />)}
       </div>
     </div>
   );

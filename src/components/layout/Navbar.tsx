@@ -12,6 +12,7 @@ const Navbar = () => {
   const [color, setColor] = useState(false);
   const location = useLocation();
   const [showServices, setShowServices] = useState(false);
+  const [clickCount, setClickCount] = useState(1);
 
   useEffect(() => {
     if (location.pathname === "/about") {
@@ -51,6 +52,11 @@ const Navbar = () => {
 
   const mouseEnterHandler = () => setShowServices(true);
   const mouseLeaveHandler = () => setShowServices(false);
+  const mobileClickHandler = () => {
+    setClickCount(clickCount + 1);
+    if (clickCount % 2 === 0) setShowServices(false);
+    else setShowServices(true);
+  };
 
   return (
     <div
@@ -125,19 +131,31 @@ const Navbar = () => {
                       onMouseLeave={mouseLeaveHandler}
                       className="w-[250px] bg-secondary p-[5px] flex flex-col items-center justify-center z-50 absolute top-6 left-[-100%] text-justify"
                     >
-                      <Link to="/software" onClick={() => setShowServices(false)} className="w-full">
+                      <Link
+                        to="/software"
+                        onClick={() => setShowServices(false)}
+                        className="w-full"
+                      >
                         <div className="w-full p-[10px] text-center hover:bg-titleFont hover:text-secondary">
                           Software Development
                         </div>
                       </Link>
 
-                      <Link to="/mobile" onClick={() => setShowServices(false)} className="w-full">
+                      <Link
+                        to="/mobile"
+                        onClick={() => setShowServices(false)}
+                        className="w-full"
+                      >
                         <div className="w-full p-[10px] text-center hover:bg-titleFont hover:text-secondary">
                           Mobile App Development
                         </div>
                       </Link>
 
-                      <Link to="/digital-marketing" onClick={() => setShowServices(false)} className="w-full">
+                      <Link
+                        to="/digital-marketing"
+                        onClick={() => setShowServices(false)}
+                        className="w-full"
+                      >
                         <div className="w-full p-[10px] text-center hover:bg-titleFont hover:text-secondary">
                           Digital Marketing
                         </div>
@@ -188,7 +206,7 @@ const Navbar = () => {
         {show ? (
           <div className="flex flex-col lg:hidden animate-slide-in min-h-screen justify-center items-center">
             <div className="flex lg:hidden flex-col justify-center items-center list-none gap-8 -mt-20">
-              <div className="flex lg:hidden flex-col justify-center items-center gap-8">
+              <div className="flex lg:hidden flex-col justify-center items-center gap-8 relative">
                 <Link to="/">
                   <li onClick={closeMobileMenu} className="">
                     Home
@@ -199,11 +217,52 @@ const Navbar = () => {
                     About
                   </li>
                 </Link>
-                <Link to="/service">
-                  <li onClick={closeMobileMenu} className="">
+
+                <div
+                  onClick={mobileClickHandler}
+                  className={`mb-[${showServices ? 100 : 0}px] flex items-center justify-center gap-[3px] transition-all duration-300`}
+                >
+                  <li className="">
                     Service
                   </li>
-                </Link>
+                  {showServices ? <FaAngleUp /> : <FaAngleDown />}
+                  {showServices && (
+                    <div
+                      className="w-[250px] bg-titleFont text-secondary p-[5px] flex flex-col items-center justify-center z-0 absolute top-36 left-[-125%] text-justify rounded-2xl"
+                    >
+                      <Link
+                        to="/software"
+                        onClick={closeMobileMenu}
+                        className="w-full"
+                      >
+                        <div className="w-full p-[5px] text-center hover:bg-secondary hover:text-titleFont rounded-xl">
+                          Software Development
+                        </div>
+                      </Link>
+
+                      <Link
+                        to="/mobile"
+                        onClick={closeMobileMenu}
+                        className="w-full"
+                      >
+                        <div className="w-full p-[5px] text-center hover:bg-secondary hover:text-titleFont rounded-xl">
+                          Mobile App Development
+                        </div>
+                      </Link>
+
+                      <Link
+                        to="/digital-marketing"
+                        onClick={closeMobileMenu}
+                        className="w-full"
+                      >
+                        <div className="w-full p-[5px] text-center hover:bg-secondary hover:text-titleFont rounded-xl">
+                          Digital Marketing
+                        </div>
+                      </Link>
+                    </div>
+                  )}
+                </div>
+
                 <Link to="/product">
                   <li onClick={closeMobileMenu} className="">
                     Product

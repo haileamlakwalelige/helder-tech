@@ -21,7 +21,7 @@ const BenefitItem: React.FC<props> = (props) => {
 
       <ul className="list-disc text-justify">
         {props.detail.map((item) => (
-          <li className="text-titleFont text-[14px] leading-[25px] tracking-[2%]">
+          <li key={item.title} className="text-titleFont text-[14px] leading-[25px] tracking-[2%]">
             <span className="font-[700]">{item.title}</span>
             <span className="text-normalFont font-[400]">
               {item.description}
