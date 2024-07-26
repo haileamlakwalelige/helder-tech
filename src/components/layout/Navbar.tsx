@@ -125,19 +125,19 @@ const Navbar = () => {
                       onMouseLeave={mouseLeaveHandler}
                       className="w-[250px] bg-secondary p-[5px] flex flex-col items-center justify-center z-50 absolute top-6 left-[-100%] text-justify"
                     >
-                      <Link to="/software" className="w-full">
+                      <Link to="/software" onClick={() => setShowServices(false)} className="w-full">
                         <div className="w-full p-[10px] text-center hover:bg-titleFont hover:text-secondary">
                           Software Development
                         </div>
                       </Link>
 
-                      <Link to="/mobile" className="w-full">
+                      <Link to="/mobile" onClick={() => setShowServices(false)} className="w-full">
                         <div className="w-full p-[10px] text-center hover:bg-titleFont hover:text-secondary">
                           Mobile App Development
                         </div>
                       </Link>
 
-                      <Link to="/digital-marketing" className="w-full">
+                      <Link to="/digital-marketing" onClick={() => setShowServices(false)} className="w-full">
                         <div className="w-full p-[10px] text-center hover:bg-titleFont hover:text-secondary">
                           Digital Marketing
                         </div>
