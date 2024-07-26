@@ -25,7 +25,7 @@ const ServiceCard: React.FC<props> = (props) => {
 
       <ul className="w-[95%] text-justify list-disc">
         {props.data.detail.map((item) => (
-          <li className="text-[14px] text-titleFont font-[400] leading-[16.41px]">
+          <li key={item.title} className="text-[14px] text-titleFont font-[400] leading-[16.41px]">
             <span className="font-[700]">{item.title} </span>
             <span className="text-normalFont">
               {item.description}
