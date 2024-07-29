@@ -6,7 +6,7 @@ interface props {
 
 const HomeServiceCard: React.FC<props> = (props) => {
   return (
-    <div className="w-[20%] p-[15px] flex flex-col items-center justify-center gap-[20px]">
+    <div className="w-[20%] p-[15px] flex flex-col items-center justify-center gap-[20px] hover:bg-[url('/hoverImg.png')] hover:bg-cover">
       <div className="w-full h-[200px] shadow-md flex items-center justify-center">
         <img src={props.img} alt="" />
       </div>
