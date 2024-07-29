@@ -12,7 +12,7 @@ export default {
         titleFont: '#006cff',
         specialTitleFont: '#28287F',
         normalFont: '#6f6f6f',
-        footer:"#69C800",
+        footer:"#3A79CE",
       },
     },
   },
