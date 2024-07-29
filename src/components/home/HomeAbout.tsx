@@ -1,11 +1,12 @@
-import { FaArrowRight } from "react-icons/fa";
+import Button from "../reusables/Button";
+import MainTitle from "../reusables/MainTitle";
 import aboutUsImg from "../../assets/aboutUs.jpg";
 import decorationIcon from "../../assets/decorationIcon.png";
 
 const HomeAbout = () => {
   return (
     <div className="p-[20px] bg-secondary">
-      <h2 className="mb-[40px] text-specialTitleFont text-[32px] font-bold">ABOUT US</h2>
+      <MainTitle title="ABOUT US" />
       <div className="w-[97%] h-[350px] m-auto p-[24px] bg-white flex items-center justify-between gap-[12px] relative">
         <div className="text-justify flex flex-col items-start justify-center gap-[20px]">
           <h2 className="text-titleFont text-[24px] font-semibold">Welcome to Our Company</h2>
@@ -19,13 +20,11 @@ const HomeAbout = () => {
             span accross different industries
           </p>
 
-          <button className="p-[10px] bg-titleFont text-center text-white flex items-center justify-center gap-[10px] rounded-[36px]">
-            <h2>Read more</h2> <FaArrowRight />
-          </button>
+          <Button />
         </div>
 
         <img src={aboutUsImg} alt="" className="z-10 absolute right-0" />
-        <img src={decorationIcon} alt="" className="z-0 absolute bottom-0 left-[50%] translate-x-[-90%]" />
+        <img src={decorationIcon} alt="" className="z-0 absolute bottom-0 left-[50%] translate-x-[-0%]" />
       </div>
     </div>
   );
