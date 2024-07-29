@@ -1,5 +1,6 @@
 import { FaArrowRight } from "react-icons/fa";
 import aboutUsImg from "../../assets/aboutUs.jpg";
+import decorationIcon from "../../assets/decorationIcon.png";
 
 const HomeAbout = () => {
   return (
@@ -23,7 +24,8 @@ const HomeAbout = () => {
           </button>
         </div>
 
-        <img src={aboutUsImg} alt="" className="absolute right-0" />
+        <img src={aboutUsImg} alt="" className="z-10 absolute right-0" />
+        <img src={decorationIcon} alt="" className="z-0 absolute bottom-0 left-[50%] translate-x-[-90%]" />
       </div>
     </div>
   );
