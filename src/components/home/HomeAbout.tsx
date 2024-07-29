@@ -5,7 +5,7 @@ import decorationIcon from "../../assets/decorationIcon.png";
 
 const HomeAbout = () => {
   return (
-    <div className="p-[20px] bg-secondary">
+    <div className="px-[20px] py-[40px] bg-secondary">
       <MainTitle title="ABOUT US" />
       <div className="w-[97%] h-[350px] m-auto p-[24px] bg-white flex items-center justify-between gap-[12px] relative">
         <div className="text-justify flex flex-col items-start justify-center gap-[20px]">
