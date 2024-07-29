@@ -24,7 +24,7 @@ const HomeAbout = () => {
         </div>
 
         <img src={aboutUsImg} alt="" className="z-10 absolute right-0" />
-        <img src={decorationIcon} alt="" className="z-0 absolute bottom-0 left-[50%] translate-x-[-0%]" />
+        <img src={decorationIcon} alt="" className="z-0 absolute bottom-0 left-[50%] translate-x-[-70%]" />
       </div>
     </div>
   );
