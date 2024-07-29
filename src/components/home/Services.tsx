@@ -41,6 +41,6 @@ const Services = () => {
       <div className="w-screen mt-[30px] flex items-center justify-center"><Button /></div>
     </div>
   );
-};
+};  
 
 export default Services;
