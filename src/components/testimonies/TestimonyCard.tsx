@@ -13,10 +13,10 @@ interface props {
 
 const TestimonyCard: React.FC<props> = (props) => {
   return (
-    <div className="w-[280px] h-[329px] p-[10px] flex flex-col items-center justify-between carousel-item rounded-box">
+    <div className="w-[280px] min-h-[329px] z-10 p-[10px] flex flex-col items-center justify-between carousel-item rounded-box">
       <div className="flex flex-col items-center justify-center gap-[25px]">
         <div className="relative">
-          <img src={props.data.img} alt="" className="w-full" />
+          <img src={props.data.img} alt="" className="w-[279px] h-[179px] object-cover rounded-[8px]" />
           <img
             src={quote}
             alt=""
