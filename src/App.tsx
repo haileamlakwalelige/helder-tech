@@ -11,7 +11,7 @@ import PageNotFound from "./pages/PageNotFound";
 
 export default function App() {
   return (
-    <div>
+    <div className="bg-white">
       <BrowserRouter>
       <ScrollToTop />
         <Navbar />

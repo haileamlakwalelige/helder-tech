@@ -10,7 +10,7 @@ const HomeProjects = () => {
       <MainTitle title="PROJECTS" />
       <img src={homeServiceIcon2} alt="" className="absolute top-12 left-[172px]" />
 
-      <div className="w-full flex items-center justify-center">
+      <div className="w-full text-black flex items-center justify-center">
         <div className="w-[48%] px-[25px] py-[50px] bg-white flex flex-col items-start justify-center gap-[30px] relative">
           <h2 className="z-10 text-[24px] text-titleFont font-semibold font-['Crimson_Text']">Our Projects</h2>
           <p className="z-10 text-[20px] leading-[25px] tracking-[2%]">
