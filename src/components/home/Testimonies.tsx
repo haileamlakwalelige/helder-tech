@@ -3,6 +3,30 @@ import homeServiceIcon2 from "../../assets/homeServiceIcon2.png";
 import quote from "../../assets/quote.png";
 import TestimonyCard from "../testimonies/TestimonyCard";
 
+const testimonyData = [
+  {
+    img: "testimonyImg1.png",
+    testimony:
+      "“without me traveling to Ethiopia, they turn  my ambition of building a digital library system for my school into reality”",
+    name: "Mr. Abraham W Alemu",
+    position: "BMJ highschool, USA"
+  },
+  {
+    img: "testimonyImg2.png",
+    testimony:
+      "“They provide a service for our Local NGO organization of Website development, graphic design which help us to serve our community digitally.”",
+    name: "Mr. Tefera Hailu",
+    position: "CFSEthiopia, AA"
+  },
+  {
+    img: "testimonyImg3.png",
+    testimony:
+      "“they are a trusted partner who we rely on for timely work in graphic design and website update”",
+    name: "Mrs. Haimanot G/Meriam ",
+    position: "Mintu Export Manager"
+  },
+];
+
 const Testimonies = () => {
   return (
     <div className="w-full p-[20px] bg-secondary relative text-black">
@@ -30,12 +54,8 @@ const Testimonies = () => {
         </div>
 
         <div className="w-[64%] carousel carousel-center">
-            <TestimonyCard />
-            <TestimonyCard />
-            <TestimonyCard />
-            <TestimonyCard />
-            <TestimonyCard />
-            <TestimonyCard />
+          {testimonyData.map(item => <TestimonyCard data={item} />)}
+          {testimonyData.map(item => <TestimonyCard data={item} />)}
         </div>
       </div>
     </div>
