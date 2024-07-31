@@ -3,6 +3,7 @@ import homeServiceImg1 from "../../assets/homeServiceImg1.png";
 import homeServiceImg2 from "../../assets/homeServiceImg2.png";
 import homeServiceIcon1 from "../../assets/homeServiceIcon1.png";
 import homeServiceIcon2 from "../../assets/homeServiceIcon2.png";
+import Button from "../reusables/Button";
 
 const HomeProjects = () => {
   return (
@@ -20,6 +21,8 @@ const HomeProjects = () => {
             stunning graphic design creations, our experience encompasses a wide
             array of client needs and objectives.
           </p>
+
+          <Button />  
           <img src={homeServiceIcon1} width="161px" height="121px" className="z-0 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]" alt="" />
         </div>
         
