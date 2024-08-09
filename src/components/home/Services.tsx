@@ -38,7 +38,7 @@ const Services = () => {
           <HomeServiceCard img={item.img} title={item.title} description={item.description} />
         ))}
       </div>
-      <div className="w-full mt-[30px] flex items-center justify-center"><Button /></div>
+      <div className="w-full mt-[30px] flex items-center justify-center"><Button buttonTitle="Read More" /></div>
     </div>
   );
 };  

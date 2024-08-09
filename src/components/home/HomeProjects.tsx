@@ -22,7 +22,7 @@ const HomeProjects = () => {
             array of client needs and objectives.
           </p>
 
-          <Button />  
+          <Button buttonTitle="Read More" />  
           <img src={homeServiceIcon1} width="161px" height="121px" className="z-0 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]" alt="" />
         </div>
         
