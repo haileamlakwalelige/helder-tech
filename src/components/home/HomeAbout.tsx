@@ -20,7 +20,7 @@ const HomeAbout = () => {
             span accross different industries
           </p>
 
-          <Button />
+          <Button buttonTitle="Read More" />
         </div>
 
         <img src={aboutUsImg} alt="" className="z-10 absolute right-0" />
