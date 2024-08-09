@@ -1,9 +1,11 @@
-// import React from 'react'
+import BlogHero from "../components/blogs/BlogHero";
 
 const Blog = () => {
   return (
-    <div>Blog</div>
-  )
-}
+    <div className="w-screen min-h-screen">
+      <BlogHero />
+    </div>
+  );
+};
 
-export default Blog
+export default Blog;
