@@ -1,6 +1,5 @@
 import gif from "../../assets/TeamInnovation-ezgif.com-optimize.gif";
 import Button from "../reusables/Button";
-import BlogSlide from "./BlogSlide";
 
 const BlogIntro = () => {
   return (
@@ -29,8 +28,6 @@ const BlogIntro = () => {
         </div>
         <img src={gif} alt="" />
       </div>
-      
-      <BlogSlide />
     </div>
   );
 };

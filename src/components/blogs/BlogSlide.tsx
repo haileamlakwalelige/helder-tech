@@ -1,9 +1,10 @@
 import BlogMenu from "./BlogMenu";
 import BlogCard from "./BlogCard";
+import BlogNav from "./BlogNav";
 
 const BlogSlide = () => {
   return (
-    <div className="w-screen bg-[rgba(217,217,217,0.25)]">
+    <div className="w-screen pb-8 bg-[rgba(217,217,217,0.25)]">
       <BlogMenu />
       <div className="w-[90%] m-auto p-[20px]">
         <h2 className="text-[32px] text-titleFont font-bold">
@@ -24,7 +25,7 @@ const BlogSlide = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-3">
+      <div className="w-[90%] m-auto grid grid-cols-3 place-items-center">
         <BlogCard />
         <BlogCard />
         <BlogCard />
@@ -32,6 +33,8 @@ const BlogSlide = () => {
         <BlogCard />
         <BlogCard />
       </div>
+
+      <BlogNav />
     </div>
   );
 };
