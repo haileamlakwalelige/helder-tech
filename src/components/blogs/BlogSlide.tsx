@@ -1,14 +1,45 @@
 import BlogMenu from "./BlogMenu";
 import BlogCard from "./BlogCard";
 import BlogNav from "./BlogNav";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+const insight = {
+  image: "./blogCardImg 1.png",
+  description: "Getting the most out of your team.",
+  author: "Alemu K.",
+};
+
+const industry = {
+  image: "./blogCardImg 2.svg",
+  description: "The New Feature in React.js",
+  author: "Abiy S.",
+};
+
+const news = {
+  image: "./blogCardImg 3.avif",
+  description: "",
+  author: "Haileamlak W.",
+};
 
 const BlogSlide = () => {
-  const [placeholderContent, setPlaceholderContent] = useState("insight"); 
-  
+  const [placeholderContent, setPlaceholderContent] = useState("insight");
+  const [slideData, setSlideData] = useState({
+    image: "./blogCardImg 1.png",
+    description: "Getting the most out of your team.",
+    author: "Alemu K.",
+  });
+
+  useEffect(() => {
+    placeholderContent === "insight"
+      ? setSlideData(insight)
+      : placeholderContent === "industry"
+      ? setSlideData(industry)
+      : setSlideData(news);
+  });
+
   const getBlogCategory = (category: string) => {
-    setPlaceholderContent((prev: string) => prev = category)
-  }
+    setPlaceholderContent((prev: string) => (prev = category));
+  };
 
   console.log(placeholderContent);
 
@@ -35,12 +66,12 @@ const BlogSlide = () => {
       </div>
 
       <div className="w-[90%] m-auto grid grid-cols-3 place-items-center">
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
+        <BlogCard data={slideData} />
+        <BlogCard data={slideData} />
+        <BlogCard data={slideData} />
+        <BlogCard data={slideData} />
+        <BlogCard data={slideData} />
+        <BlogCard data={slideData} />
       </div>
 
       <BlogNav />
