@@ -33,21 +33,21 @@ const BlogMenu: React.FC<props> = (props) => {
 
   return (
     <div className="w-full overflow-x-hidden flex flex-col">
-      <div className="relative left-[5%]">
+      <div className="md:relative md:left-[5%] max-md:flex max-md:items-center max-md:justify-center">
         <button
-          className={`w-[120px] h-[60px] transition-colors duration-300 ${insightsStyle}`}
+          className={`md:w-[120px] w-[100px] h-[60px] transition-colors duration-300 ${insightsStyle}`}
           onClick={insightsHandler}
         >
           Insights
         </button>
         <button
-          className={`w-[120px] h-[60px] transition-colors duration-300 ${industryStyle}`}
+          className={`md:w-[120px] w-[100px] h-[60px] transition-colors duration-300 ${industryStyle}`}
           onClick={industryHandler}
         >
           Industry
         </button>
         <button
-          className={`w-[120px] h-[60px] transition-colors duration-300 ${newsStyle}`}
+          className={`md:w-[120px] w-[100px] h-[60px] transition-colors duration-300 ${newsStyle}`}
           onClick={newsHandler}
         >
           News
