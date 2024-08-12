@@ -1,6 +1,10 @@
 import { useState } from "react";
 
-const BlogMenu = () => {
+interface props {
+  onGetBlogCategory: Function;
+}
+
+const BlogMenu: React.FC<props> = (props) => {
   const inactiveColor = "bg-titleFont text-white";
   const activeColor = "bg-white text-titleFont";
 
@@ -12,16 +16,19 @@ const BlogMenu = () => {
     setInsightsStyle(activeColor);
     setIndustryStyle(inactiveColor);
     setNewsStyle(inactiveColor);
+    props.onGetBlogCategory("insight");
   };
   const industryHandler = () => {
     setIndustryStyle(activeColor);
     setInsightsStyle(inactiveColor);
     setNewsStyle(inactiveColor);
+    props.onGetBlogCategory("industry");
   };
   const newsHandler = () => {
     setNewsStyle(activeColor);
     setInsightsStyle(inactiveColor);
     setIndustryStyle(inactiveColor);
+    props.onGetBlogCategory("news");
   };
 
   return (
