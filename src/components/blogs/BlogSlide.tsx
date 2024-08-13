@@ -17,7 +17,7 @@ const industry = {
 
 const news = {
   image: "./blogCardImg 3.avif",
-  description: "",
+  description: "What's new in AI?",
   author: "Haileamlak W.",
 };
 
@@ -47,15 +47,18 @@ const BlogSlide = () => {
     <div className="w-screen pb-8 bg-[rgba(217,217,217,0.25)]">
       <BlogMenu onGetBlogCategory={getBlogCategory} />
       <div className="w-[90%] m-auto p-[20px]">
-        <h2 className="text-[32px] text-titleFont font-bold">
+        <h2 className="md:text-[32px] text-[22px] text-titleFont max-sm:text-center font-bold">
           Get {placeholderContent} From The Experts
         </h2>
 
         <div className="w-full mt-[20px]">
-          <form className="flex items-center justify-evenly" action="">
+          <form
+            className="flex md:flex-row flex-col items-center justify-evenly md:gap-0 gap-4"
+            action=""
+          >
             <input
               type="text"
-              className="h-[50px] w-[80%] p-2 bg-white text-[rgba(0,108,255,0.85)] placeholder-[rgba(0,108,255,0.85)] text-[18px] font-bold rounded-[10px]"
+              className="h-[50px] md:w-[80%] w-[90%] p-2 bg-white text-[rgba(0,108,255,0.85)] placeholder-[rgba(0,108,255,0.85)] text-[18px] font-bold rounded-[10px]"
               placeholder={`search ${placeholderContent} blogs here...`}
             />
             <button className="w-[110px] h-[50px] bg-titleFont text-white rounded-[10px]">
@@ -65,7 +68,7 @@ const BlogSlide = () => {
         </div>
       </div>
 
-      <div className="w-[90%] m-auto grid grid-cols-3 place-items-center">
+      <div className="w-[90%] m-auto grid md:grid-cols-3 grid-cols-1 place-items-center">
         <BlogCard data={slideData} />
         <BlogCard data={slideData} />
         <BlogCard data={slideData} />
