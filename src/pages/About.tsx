@@ -1,11 +1,12 @@
 // import React from 'react'
-
-import AboutHero from "../components/about/AboutHero"
+import AboutHero from "../components/about/AboutHero";
+import Story from "../components/about/Story";
 
 const About = () => {
   return (
-    <div className="min-h-screen">
+    <div className="w-screen min-h-screen">
       <AboutHero />
+      <Story />
     </div>
   )
 }
