@@ -1,11 +1,12 @@
 import storyImg from "../../assets/aboutUs.jpg";
+import aboutIcon from "../../assets/aboutIcon.png";
 
 const Story = () => {
   return (
     <div className="w-full">
-      <div className="w-[90%] m-auto flex items-center justify-center gap-[30px]">
-        <img src={storyImg} alt="" />
-        <div className="flex flex-col items-start justify-center gap-[30px]">
+      <div className="w-full flex items-center justify-center">
+        <img src={storyImg} className="relative left-[1%]" alt="" />
+        <div className="p-[30px] bg-[#f9f9f9] flex flex-col items-start justify-center gap-[30px] relative">
           <h2 className="text-titleFont text-[24px] font-semibold">
             The Story of Helder Technologies
           </h2>
@@ -22,6 +23,7 @@ const Story = () => {
             leadership, Helder stands as a beacon of innovation, dedicated to
             fulfilling client needs and fostering lasting partnerships.
           </p>
+          <img src={aboutIcon} className="absolute top-0 right-0" alt="" />
         </div>
       </div>
     </div>
