@@ -4,8 +4,8 @@ import aboutIcon from "../../assets/aboutIcon.png";
 const Story = () => {
   return (
     <div className="w-full">
-      <div className="w-full flex items-center justify-center">
-        <img src={storyImg} className="relative left-[1%]" alt="" />
+      <div className="w-full flex md:flex-row flex-col items-center justify-center">
+        <img src={storyImg} className="relative md:left-[1%]" alt="" />
         <div className="p-[30px] bg-[#f9f9f9] flex flex-col items-start justify-center gap-[30px] relative">
           <h2 className="text-titleFont text-[24px] font-semibold">
             The Story of Helder Technologies
@@ -31,3 +31,4 @@ const Story = () => {
 };
 
 export default Story;
+

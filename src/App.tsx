@@ -12,7 +12,7 @@ import Blog from "./pages/Blog"
 
 export default function App() {
   return (
-    <div className="bg-white">
+    <div className="w-full overflow-x-hidden bg-white">
       <BrowserRouter>
       <ScrollToTop />
         <Navbar />
