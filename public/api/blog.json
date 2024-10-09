@@ -1,0 +1,182 @@
+[
+  {
+    "id": "1",
+    "clientName": "ABC Corp",
+    "content": "YESS(Youth and Education Support Service) is a legally registered non-profit organization dedicated to youth and education support services in Ethiopia(YESSEthiopia) and the USA (YESS USA). We developed an online marketplace platform for them that connects YESS talent with employment organizations, facilitates volunteer and scholarship linking, and offers a self-paced e-learning system.",
+    "serviceType": "Website Development",
+    "startDate": "2023-01-15",
+    "endDate": "2023-04-15",
+    "expectedDate": "2023-04-20",
+    "sampleImage": "https://example.com/sample-image1.jpg",
+    "typography": {
+      "style": "Arial",
+      "size": "16px"
+    },
+    "colors": {
+      "primary": "#3498db",
+      "secondary": "#2ecc71"
+    }
+  },
+  {
+    "id": "2",
+    "clientName": "XYZ Ltd",
+    "content": "YESS(Youth and Education Support Service) is a legally registered non-profit organization dedicated to youth and education support services in Ethiopia(YESSEthiopia) and the USA (YESS USA). We developed an online marketplace platform for them that connects YESS talent with employment organizations, facilitates volunteer and scholarship linking, and offers a self-paced e-learning system.",
+    "serviceType": "Mobile App Development",
+    "startDate": "2023-03-01",
+    "endDate": "2023-06-01",
+    "expectedDate": "2023-06-10",
+    "sampleImage": "https://example.com/sample-image2.jpg",
+    "typography": {
+      "style": "Roboto",
+      "size": "14px"
+    },
+    "colors": {
+      "primary": "#e74c3c",
+      "secondary": "#8e44ad"
+    }
+  },
+  {
+    "id": "3",
+    "clientName": "LMN Inc",
+    "content": "YESS(Youth and Education Support Service) is a legally registered non-profit organization dedicated to youth and education support services in Ethiopia(YESSEthiopia) and the USA (YESS USA). We developed an online marketplace platform for them that connects YESS talent with employment organizations, facilitates volunteer and scholarship linking, and offers a self-paced e-learning system.",
+    "serviceType": "Digital Marketing",
+    "startDate": "2023-05-10",
+    "endDate": "2023-07-20",
+    "expectedDate": "2023-07-25",
+    "sampleImage": "https://example.com/sample-image3.jpg",
+    "typography": {
+      "style": "Helvetica",
+      "size": "18px"
+    },
+    "colors": {
+      "primary": "#f39c12",
+      "secondary": "#d35400"
+    }
+  },
+  {
+    "id": "4",
+    "clientName": "OPQ Global",
+    "content": "YESS(Youth and Education Support Service) is a legally registered non-profit organization dedicated to youth and education support services in Ethiopia(YESSEthiopia) and the USA (YESS USA). We developed an online marketplace platform for them that connects YESS talent with employment organizations, facilitates volunteer and scholarship linking, and offers a self-paced e-learning system.",
+    "serviceType": "Production",
+    "startDate": "2023-02-01",
+    "endDate": "2023-05-01",
+    "expectedDate": "2023-05-05",
+    "sampleImage": "https://example.com/sample-image4.jpg",
+    "typography": {
+      "style": "Times New Roman",
+      "size": "20px"
+    },
+    "colors": {
+      "primary": "#16a085",
+      "secondary": "#27ae60"
+    }
+  },
+  {
+    "id": "5",
+    "clientName": "RST Media",
+    "content": "YESS(Youth and Education Support Service) is a legally registered non-profit organization dedicated to youth and education support services in Ethiopia(YESSEthiopia) and the USA (YESS USA). We developed an online marketplace platform for them that connects YESS talent with employment organizations, facilitates volunteer and scholarship linking, and offers a self-paced e-learning system.",
+    "serviceType": "Website Development",
+    "startDate": "2023-07-01",
+    "endDate": "2023-09-01",
+    "expectedDate": "2023-09-10",
+    "sampleImage": "https://example.com/sample-image5.jpg",
+    "typography": {
+      "style": "Verdana",
+      "size": "15px"
+    },
+    "colors": {
+      "primary": "#2980b9",
+      "secondary": "#8e44ad"
+    }
+  },
+  {
+    "id": "6",
+    "clientName": "UVW Tech",
+    "content": "YESS(Youth and Education Support Service) is a legally registered non-profit organization dedicated to youth and education support services in Ethiopia(YESSEthiopia) and the USA (YESS USA). We developed an online marketplace platform for them that connects YESS talent with employment organizations, facilitates volunteer and scholarship linking, and offers a self-paced e-learning system.",
+    "serviceType": "Mobile App Development",
+    "startDate": "2023-08-15",
+    "endDate": "2023-11-15",
+    "expectedDate": "2023-11-20",
+    "sampleImage": "https://example.com/sample-image6.jpg",
+    "typography": {
+      "style": "Open Sans",
+      "size": "17px"
+    },
+    "colors": {
+      "primary": "#c0392b",
+      "secondary": "#d35400"
+    }
+  },
+  {
+    "id": "7",
+    "clientName": "XYZ Creatives",
+    "content": "YESS(Youth and Education Support Service) is a legally registered non-profit organization dedicated to youth and education support services in Ethiopia(YESSEthiopia) and the USA (YESS USA). We developed an online marketplace platform for them that connects YESS talent with employment organizations, facilitates volunteer and scholarship linking, and offers a self-paced e-learning system.",
+    "serviceType": "Digital Marketing",
+    "startDate": "2023-06-01",
+    "endDate": "2023-08-01",
+    "expectedDate": "2023-08-05",
+    "sampleImage": "https://example.com/sample-image7.jpg",
+    "typography": {
+      "style": "Lato",
+      "size": "16px"
+    },
+    "colors": {
+      "primary": "#9b59b6",
+      "secondary": "#34495e"
+    }
+  },
+  {
+    "id": "8",
+    "clientName": "123 Studios",
+    "content": "YESS(Youth and Education Support Service) is a legally registered non-profit organization dedicated to youth and education support services in Ethiopia(YESSEthiopia) and the USA (YESS USA). We developed an online marketplace platform for them that connects YESS talent with employment organizations, facilitates volunteer and scholarship linking, and offers a self-paced e-learning system.",
+    "serviceType": "Production",
+    "startDate": "2023-04-01",
+    "endDate": "2023-06-01",
+    "expectedDate": "2023-06-05",
+    "sampleImage": "https://example.com/sample-image8.jpg",
+    "typography": {
+      "style": "Georgia",
+      "size": "18px"
+    },
+    "colors": {
+      "primary": "#e67e22",
+      "secondary": "#f1c40f"
+    }
+  },
+  {
+    "id": "9",
+    "clientName": "ACME Corp",
+    "content": "YESS(Youth and Education Support Service) is a legally registered non-profit organization dedicated to youth and education support services in Ethiopia(YESSEthiopia) and the USA (YESS USA). We developed an online marketplace platform for them that connects YESS talent with employment organizations, facilitates volunteer and scholarship linking, and offers a self-paced e-learning system.",
+    "serviceType": "Website Development",
+    "startDate": "2023-05-01",
+    "endDate": "2023-07-01",
+    "expectedDate": "2023-07-10",
+    "sampleImage": "https://example.com/sample-image9.jpg",
+    "typography": {
+      "style": "Tahoma",
+      "size": "16px"
+    },
+    "colors": {
+      "primary": "#2c3e50",
+      "secondary": "#95a5a6"
+    }
+  },
+  {
+    "id": "10",
+    "clientName": "Beta Innovations",
+    "content": "YESS(Youth and Education Support Service) is a legally registered non-profit organization dedicated to youth and education support services in Ethiopia(YESSEthiopia) and the USA (YESS USA). We developed an online marketplace platform for them that connects YESS talent with employment organizations, facilitates volunteer and scholarship linking, and offers a self-paced e-learning system.",
+    "serviceType": "Mobile App Development",
+    "startDate": "2023-09-01",
+    "endDate": "2023-12-01",
+    "expectedDate": "2023-12-10",
+    "sampleImage": "https://example.com/sample-image10.jpg",
+    "typography": {
+      "style": "Courier New",
+      "size": "15px"
+    },
+    "colors": {
+      "primary": "#34495e",
+      "secondary": "#16a085"
+    }
+  }
+]
