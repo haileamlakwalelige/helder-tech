@@ -16,19 +16,19 @@ const BlogMenu: React.FC<props> = (props) => {
     setInsightsStyle(activeColor);
     setIndustryStyle(inactiveColor);
     setNewsStyle(inactiveColor);
-    props.onGetBlogCategory("insight");
+    props.onGetBlogCategory("Insight");
   };
   const industryHandler = () => {
     setIndustryStyle(activeColor);
     setInsightsStyle(inactiveColor);
     setNewsStyle(inactiveColor);
-    props.onGetBlogCategory("industry");
+    props.onGetBlogCategory("Industry");
   };
   const newsHandler = () => {
     setNewsStyle(activeColor);
     setInsightsStyle(inactiveColor);
     setIndustryStyle(inactiveColor);
-    props.onGetBlogCategory("news");
+    props.onGetBlogCategory("News");
   };
 
   return (
