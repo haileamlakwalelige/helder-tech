@@ -5,8 +5,9 @@ import Hero from "../components/home/Hero"
 
 const Contact = () => {
   return (
-    <div>
+    <div className=''>
       <Hero/>
+      <Address/>
     </div>
   )
 }
