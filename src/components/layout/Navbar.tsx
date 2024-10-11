@@ -6,7 +6,8 @@ import { Link, useLocation } from "react-router-dom";
 import { FaAngleDown } from "react-icons/fa";
 import { FaAngleUp } from "react-icons/fa";
 
-const Navbar = () => {
+
+const Navbar= () => {
   const [show, setShow] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState(false);
   const [color, setColor] = useState(false);
@@ -15,10 +16,10 @@ const Navbar = () => {
   const [clickCount, setClickCount] = useState(1);
 
   useEffect(() => {
-    if (location.pathname === "/about") {
-      setColor(true);
-    } else {
+    if (location.pathname === "/" ) {
       setColor(false);
+    } else {
+      setColor(true);
     }
   }, [location]);
 
@@ -82,7 +83,11 @@ const Navbar = () => {
         <div className="ml-5 gap-5 list-none items-center justify-center hidden lg:flex">
           <div className="hidden lg:flex">
             <Link to="/">
-              <img src={logo} alt="" className="max-w-[249px] max-h-[63px]" />
+              <img
+                src={logo}
+                alt=""
+                className="max-w-[279px] ml-[6rem] max-h-[93px]"
+              />
             </Link>
           </div>
         </div>
@@ -122,7 +127,7 @@ const Navbar = () => {
                       color && !scrolled ? "text-white z-50" : "z-50"
                     }`}
                   >
-                    Service
+                    Services
                   </p>
                   {showServices ? <FaAngleUp /> : <FaAngleDown />}
                   {showServices && (
@@ -171,7 +176,7 @@ const Navbar = () => {
                       color && !scrolled ? "text-white z-50" : "z-50"
                     }`}
                   >
-                    Product
+                    Products
                   </p>
                 </Link>
                 <Link to="/project">
@@ -181,7 +186,17 @@ const Navbar = () => {
                       color && !scrolled ? "text-white z-50" : "z-50"
                     }`}
                   >
-                    Project
+                    Projects
+                  </p>
+                </Link>
+                <Link to="/insight">
+                  <p
+                    onClick={closeMobileMenu}
+                    className={`${
+                      color && !scrolled ? "text-white z-50" : "z-50"
+                    }`}
+                  >
+                    Insight
                   </p>
                 </Link>
               </div>
@@ -220,16 +235,14 @@ const Navbar = () => {
 
                 <div
                   onClick={mobileClickHandler}
-                  className={`mb-[${showServices ? 100 : 0}px] flex items-center justify-center gap-[3px] transition-all duration-300`}
+                  className={`mb-[${
+                    showServices ? 100 : 0
+                  }px] flex items-center justify-center gap-[3px] transition-all duration-300`}
                 >
-                  <li className="">
-                    Service
-                  </li>
+                  <li className="">Service</li>
                   {showServices ? <FaAngleUp /> : <FaAngleDown />}
                   {showServices && (
-                    <div
-                      className="w-[250px] bg-titleFont text-secondary p-[5px] flex flex-col items-center justify-center z-0 absolute top-36 left-[-125%] text-justify rounded-2xl"
-                    >
+                    <div className="w-[250px] bg-titleFont text-secondary p-[5px] flex flex-col items-center justify-center z-0 absolute top-36 left-[-125%] text-justify rounded-2xl">
                       <Link
                         to="/software"
                         onClick={closeMobileMenu}

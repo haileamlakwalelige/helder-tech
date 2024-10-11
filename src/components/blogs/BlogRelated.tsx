@@ -14,7 +14,7 @@ interface props {
   };
 }
 
-const BlogCard: React.FC<props> = (props) => {
+const BlogRelated: React.FC<props> = (props) => {
 //   const navigate = useNavigate();
 
 //   const handleCardClick = () => {
@@ -25,7 +25,7 @@ const BlogCard: React.FC<props> = (props) => {
   return (
     
       <div
-        className="my-[20px] justify-between shadow-xl  w-[17rem] h-[19rem] flex flex-col  hover:shadow-3xl hover:shadow-[#cfb559]/60 rounded-2xl gap-[20px] "
+        className="my-[20px] justify-between shadow-xl bg-[white]  w-[17rem] h-[19rem] flex flex-col  hover:shadow-3xl hover:shadow-[#3a3521]/40 rounded-2xl gap-[20px] "
         // onClick={handleCardClick}
       >
         <img
@@ -44,4 +44,4 @@ const BlogCard: React.FC<props> = (props) => {
   );
 };
 
-export default BlogCard;
+export default BlogRelated;

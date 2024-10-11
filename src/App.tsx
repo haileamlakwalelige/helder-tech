@@ -9,15 +9,18 @@ import Mobile from "./pages/Mobile";
 import DigitalMarketing from "./pages/DigitalMarketing";
 import ScrollToTop from "./ScrollToTop";
 import PageNotFound from "./pages/PageNotFound";
-import Blog from "./pages/Blog"
-import Project from "./pages/Project"
-import ProjectDetail from "./components/projects/ProjectDetail"
+// import Blog from "./pages/Blog";
+import Project from "./pages/Project";
+import ProjectDetail from "./components/projects/ProjectDetail";
+import BlogDetail from "./components/blogs/BlogDetail";
+import Blog from "./pages/Blog";
 
-export default function App() {ProjectDetail
+export default function App() {
+  
   return (
     <div className="w-full overflow-x-hidden bg-white">
       <BrowserRouter>
-      <ScrollToTop />
+        <ScrollToTop />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -27,12 +30,13 @@ export default function App() {ProjectDetail
           <Route path="/mobile" element={<Mobile />} />
           <Route path="/digital-marketing" element={<DigitalMarketing />} />
           <Route path="/*" element={<PageNotFound />} />
-          <Route path="/blogs" element={<Blog />} />
+          <Route path="/insight" element={<Blog />} />
+          <Route path="/insight/:id/:type" element={<BlogDetail />} />
           <Route path="/project" element={<Project />} />
           <Route path="/projectdetail/:id" element={<ProjectDetail />} />
         </Routes>
         <Footer />
       </BrowserRouter>
     </div>
-  )
+  );
 }
