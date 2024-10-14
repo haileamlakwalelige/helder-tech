@@ -9,6 +9,9 @@ import { Link, useParams } from "react-router-dom";
 import BlogNav from "./BlogNav";
 import BlogCard from "./BlogCard";
 import BlogRelated from "./BlogRelated";
+import { RiArrowRightDoubleFill } from "react-icons/ri";
+import SocialShare from "../reusables/SocialShare";
+// import SocialShare from "../reusables/SocialShare";
 
 // Get the blog ID from the URL
 const insightBlogs = [
@@ -195,42 +198,55 @@ const BlogDetail = () => {
             className="w-full h-[18rem] object-cover rounded-none"
             alt={currentBlog.title}
           />
-          <div className="flex text-black mt-[2rem] gap-2 mx-[7rem] items-center">
+          <div className="text-black mt-[2rem] gap-2 lg:mx-[7rem] mx-[2rem] flex-wrap flex items-center">
             <p>Home</p>
             <FaChevronRight size={12} />
             <p>SocialMinds</p>
             <FaChevronRight size={12} />
             <p>{type}</p>
             <FaChevronRight size={12} />
-            <p className="font-semibold">{currentBlog.title}</p>
+            <p className="lg:font-semibold lg:text-[1rem] text-[2rem]">{currentBlog.title}</p>
           </div>
-          <div className="text-black flex items-center gap-2 mx-[7rem] mt-10">
+          <div className="text-black lg:flex items-center gap-2 lg:mx-[7rem] mx-[2rem] mt-10">
+            <div className="flex lg:gap-0 gap-2">
             <IoPersonOutline size={20} />
             <p className="text-lg mr-[7rem]">{currentBlog.author}</p>
+            </div>
+            <div className="flex lg:mt-0 mt-2 lg:gap-0 gap-2">
             <IoCalendarNumberOutline size={25} />
             <p className="text-lg mr-[7rem]">{currentBlog.date}</p>
+            </div>
+            <div className="flex lg:mt-0 mt-2 lg:gap-0 gap-2">
             <IoTimeOutline size={27} />
             <p className="text-lg mr-[7rem]">{currentBlog.postedTime} min</p>
+            </div>
           </div>
-          <h1 className="text-black text-[3rem] mx-[7rem] my-[3rem] ">
+          <h1 className="text-black lg:block hidden text-[3rem] mx-[7rem] my-[3rem] ">
             {currentBlog.title}
           </h1>
           <p
-            className="mx-[7rem] text-black"
+            className="lg:mx-[7rem] mx-[2rem] lg:mt-0 mt-2 text-black"
             dangerouslySetInnerHTML={{ __html: currentBlog.description }}
           />
-          <div className="mx-8 mt-8">
+          <div className="lg:mx-8 mt-8">
             <BlogNav />
           </div>
-          <div className="bg-slate-600 pt-20">
+          <div className="bg-slate-600 pt-4">
+            <div className="lg:justify-end flex flex-wrap items-center lg:text-end text-center justify-center">
+              <p className="text-white text-[1.5rem] font-semibold">
+                Share on social
+              </p>
+              <RiArrowRightDoubleFill size={30} color="white" />
+              <SocialShare />
+            </div>
             <div className="bg-slate-300 ">
-              <p className="text-[2rem] mx-[7rem] text-black font-semibold pt-5">
+              <p className="text-[2rem] lg:mx-[7rem] mx-[2rem] text-black font-semibold pt-5">
                 Like this? Read more
               </p>
-              <div className="w-[90%] m-auto grid md:grid-cols-3 gap-0 grid-cols-1 place-items-center">
+              <div className="w-[90%] m-auto grid md:grid-cols-3 s-3 gap-0 grid-cols-1 place-items-center">
                 {insightBlogs
-                  .filter((blog) => blog.id !== id) // Exclude the selected blog using the 'id' from useParams
-                  .slice(0, 3) // Display the first 3 blogs excluding the selected one
+                  .filter((blog) => blog.id !== id) 
+                  .slice(0, 3) 
                   .map((blog, index) => (
                     <Link to={`/insight/${blog.id}/${type}`} key={index}>
                       <BlogRelated data={blog} />

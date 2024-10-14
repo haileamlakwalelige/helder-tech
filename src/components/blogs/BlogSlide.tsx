@@ -237,7 +237,7 @@ const BlogSlide = () => {
           </div>
         </div>
       </div>
-      <p className="text-black mx-[5rem] mt-[2rem] text-[5rem] font-semibold font-serif">
+      <p className="text-black lg:mx-[5rem] mx-[2rem] mt-[2rem] text-[5rem] font-semibold font-serif">
         {placeholderContent}
       </p>
       <BlogNav />

@@ -18,7 +18,11 @@ const Navbar= () => {
   useEffect(() => {
     if (location.pathname === "/" ) {
       setColor(false);
-    } else {
+    }
+     else if(location.pathname === "/mobile"){
+      setColor(false);
+    }
+     else {
       setColor(true);
     }
   }, [location]);
@@ -72,7 +76,7 @@ const Navbar= () => {
           <img src={logo} alt="" className="max-w-[249px] max-h-[63px] " />
         </Link>
         <div onClick={() => setShow(!show)} className="">
-          {show ? <FaTimes /> : <FaBars />}
+          {show ? <FaTimes size={22} /> : <FaBars size={22}/>}
         </div>
       </div>
       <div
@@ -284,6 +288,11 @@ const Navbar= () => {
                 <Link to="/project">
                   <li onClick={closeMobileMenu} className="">
                     Project
+                  </li>
+                </Link>
+                <Link to="/insight">
+                  <li onClick={closeMobileMenu} className="">
+                    Insights
                   </li>
                 </Link>
               </div>

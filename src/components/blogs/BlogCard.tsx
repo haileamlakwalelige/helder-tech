@@ -33,7 +33,7 @@ const BlogCard: React.FC<props> = (props) => {
           alt=""
           className="w-[270px] h-[172px] rounded-[20px] object-cover"
         />
-        <h2 className="text-titleFont px-2 text-[18px] w-[14rem] lg:text-justify text-center font-bold line-clamp-2">
+        <h2 className="text-titleFont px-2 text-[18px] w-[14rem] lg:text-justify text-start font-bold line-clamp-2">
           {props.data.title}
         </h2>
         <h2 className="text-black px-2 text-start justify-start text-[16px] font-bold">

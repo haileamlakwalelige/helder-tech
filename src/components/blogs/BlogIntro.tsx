@@ -1,10 +1,10 @@
-import gif from "../../assets/TeamInnovation-ezgif.com-optimize.gif";
+import gif from "../../assets/gif.gif";
 import Button from "../reusables/Button";
 
 const BlogIntro = () => {
   return (
     <div className="mb-4">
-      <div className="w-[90%] m-auto flex lg:flex-row flex-col-reverse items-center justify-evenly">
+      <div className="w-[90%] lg:m-auto mx-[2rem] flex lg:flex-row flex-col-reverse items-center justify-evenly">
         <div className="flex flex-col items-start justify-center gap-5">
           <p className="text-titleFont text-bold lg:text-[48px] text-[20px] text-center">
             Expand Your Knowledge
@@ -14,7 +14,7 @@ const BlogIntro = () => {
           </p>
           <Button buttonTitle="Join Our Community" />
         </div>
-        <img src={gif} alt="" />
+        <img src={gif} alt="Gif" className="w-[33rem]"/>
       </div>
     </div>
   );

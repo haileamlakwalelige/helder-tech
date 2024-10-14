@@ -1,37 +1,37 @@
 const BlogNav = () => {
   return (
-    <div className="mx-[5rem] mb-[2rem]">
-      <p className="text-[#383838] text-[3rem] ">
+    <div className="lg:mx-[5rem]  mx-[2rem] mb-[2rem]">
+      <p className="text-[#383838] lg:text-[3rem] text-[2rem]">
         Get updates delivered straight to your inbox
       </p>
       <form className="mt-[3rem]">
-        <div className="flex gap-5">
+        <div className="lg:flex gap-5">
           <input
             type="text"
             placeholder="First name*"
-            className="bg-white border-b pb-3 w-[37rem] outline-none border-black placeholder-[#383838] placeholder:font-semibold "
+            className="bg-white border-b pb-3 lg:w-[37rem] w-full outline-none border-black placeholder-[#383838] placeholder:font-semibold "
           />
           <input
             type="text"
             placeholder="Surname*"
-            className="bg-white border-b pb-3 w-[37rem] outline-none border-black placeholder-[#383838] placeholder:font-semibold "
+            className="bg-white border-b mt-[2rem] lg:mt-0  pb-3 lg:w-[37rem] w-full outline-none border-black placeholder-[#383838] placeholder:font-semibold "
           />
         </div>
         <input
           type="text"
           placeholder="Your email*"
-          className="bg-white border-b pb-3 w-full mt-[2rem] outline-none border-black placeholder-[#383838] placeholder:font-semibold "
+          className="bg-white border-b pb-3   w-full mt-[2rem] outline-none border-black placeholder-[#383838] placeholder:font-semibold "
         />
-        <div className="flex gap-5 mt-[2rem]">
+        <div className="lg:flex gap-5 mt-[2rem]">
           <input
             type="text"
             placeholder="Job title*"
-            className="bg-white border-b pb-3 w-[37rem] outline-none border-black placeholder-[#383838] placeholder:font-semibold "
+            className="bg-white border-b pb-3 lg:w-[37rem] w-full outline-none border-black placeholder-[#383838] placeholder:font-semibold "
           />
           <input
             type="text"
             placeholder="Company*"
-            className="bg-white border-b pb-3 w-[37rem] outline-none border-black placeholder-[#383838] placeholder:font-semibold "
+            className="bg-white border-b pb-3 mt-[2rem] lg:mt-0  lg:w-[37rem] w-full outline-none border-black placeholder-[#383838] placeholder:font-semibold "
           />
         </div>
         <p className="text-[#383838]">Where did you hear about us?</p>
