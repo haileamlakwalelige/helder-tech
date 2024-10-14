@@ -4,6 +4,8 @@ import BlogNav from "./BlogNav";
 import { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { BiSearch } from "react-icons/bi";
+import { FiSearch } from "react-icons/fi";
 
 const insightBlogs = [
   {
@@ -151,6 +153,7 @@ const BlogSlide = () => {
   const [blogData, setBlogData] = useState(insightBlogs);
   const [currentPage, setCurrentPage] = useState(1);
   const cardsPerPage = 8; // Number of blog cards per page
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     if (placeholderContent === "Insight") {
@@ -163,16 +166,23 @@ const BlogSlide = () => {
     setCurrentPage(1); // Reset to page 1 on category change
   }, [placeholderContent]);
 
+  // Filter blog data based on the search query (title, description, or author)
+  const filteredBlogs = blogData.filter(
+    (blog) =>
+      blog.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      blog.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      blog.author.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   // Calculate total pages based on the number of blog cards and cards per page
   const totalPages = Math.ceil(blogData.length / cardsPerPage);
 
-  // Get the cards for the current page
-  const currentCards = blogData.slice(
-    (currentPage - 1) * cardsPerPage,
-    currentPage * cardsPerPage
-  );
+  // Pagination logic
+  const indexOfLastCard = currentPage * cardsPerPage;
+  const indexOfFirstCard = indexOfLastCard - cardsPerPage;
+  const currentCards = filteredBlogs.slice(indexOfFirstCard, indexOfLastCard);
 
-  const handlePageChange =(direction: string)=> {
+  const handlePageChange = (direction: string) => {
     if (direction === "prev" && currentPage > 1) {
       setCurrentPage((prevPage) => prevPage - 1);
     } else if (direction === "next" && currentPage < totalPages) {
@@ -189,58 +199,70 @@ const BlogSlide = () => {
             Get {placeholderContent} From The Experts
           </h2>
 
-          <div className="w-full mt-[20px]">
-            <form
-              className="flex md:flex-row flex-col items-center justify-evenly md:gap-0 gap-4"
-              action=""
-            >
-              <input
-                type="text"
-                className="h-[50px] md:w-[80%] w-[90%] p-2 bg-white shadow-xl text-[rgba(0,108,255,0.85)] 
+          <div className="mt-[20px] h-[50px] mx-auto rounded-lg shadow-xl md:w-[80%] justify-between items-center flex w-[90%] bg-white shadow-xl ">
+            <input
+              type="text"
+              className="h-[50px] md:w-[80%] w-[90%] outline-none mt-4 bg-white shadow-xl text-[rgba(0,108,255,0.85)] 
                 placeholder-[rgba(180,180,180,0.85)] text-[18px] font-bold rounded-[10px]"
-                placeholder={`search ${placeholderContent} blogs here...`}
-              />
-              <button className="w-[110px] h-[50px] bg-titleFont text-white rounded-[10px]">
-                Search
-              </button>
-            </form>
+              placeholder={`search ${placeholderContent} blogs here...`}
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              style={{ padding: "8px", marginBottom: "20px" }}
+            />
+            <FiSearch size={30} color="blue" />
           </div>
         </div>
 
-        {/* Display the current page's blog cards */}
-        <div className="w-[90%] m-auto grid md:grid-cols-4 gap-10 grid-cols-1 place-items-center">
-          {currentCards.map((blog, index) => (
-            <Link to={`/insight/${blog.id}/${placeholderContent}`}>
-              <BlogCard key={index} data={blog} />
-            </Link>
-          ))}
-        </div>
-
-        {/* Pagination Controls */}
-        <div className="w-full mt-[50px] flex items-center justify-center">
-          <div className="text-titleFont text-[30px] font-bold flex items-center justify-between gap-[70px]">
-            <FaChevronLeft
-              onClick={() => handlePageChange("prev")}
-              className={`cursor-pointer ${
-                currentPage === 1 ? "text-gray-400" : "text-black"
-              }`}
-            />
-            <h2 className="text-[20px]">
-              Page {currentPage} of {totalPages}
+        {filteredBlogs.length === 0 ? (
+          <div className="w-full mt-[50px] flex items-center justify-center">
+            <h2 className="text-titleFont text-[20px] font-bold">
+              No information found
             </h2>
-            <FaChevronRight
-              onClick={() => handlePageChange("next")}
-              className={`cursor-pointer ${
-                currentPage === totalPages ? "text-gray-400" : "text-black"
-              }`}
-            />
           </div>
-        </div>
+        ) : (
+          <>
+            {/* Display the current page's blog cards */}
+            <div className="w-[90%] m-auto grid md:grid-cols-4 gap-10 grid-cols-1 place-items-center">
+              {currentCards.map((blog, index) => (
+                <Link to={`/insight/${blog.id}/${placeholderContent}`}>
+                  <BlogCard key={index} data={blog} />
+                </Link>
+              ))}
+            </div>
+
+            {/* Pagination Controls */}
+            <div className="w-full mt-[50px] flex items-center justify-center">
+              <div className="text-titleFont text-[30px] font-bold flex items-center justify-between gap-[70px]">
+                {/* Previous Button */}
+                <FaChevronLeft
+                  onClick={() => handlePageChange("prev")}
+                  className={`cursor-pointer ${
+                    currentPage === 1 ? "text-gray-400" : "text-black"
+                  }`}
+                />
+
+                {/* Page Indicator */}
+                <h2 className="text-[20px]">
+                  Page {currentPage} of {totalPages}
+                </h2>
+
+                {/* Next Button */}
+                <FaChevronRight
+                  onClick={() => handlePageChange("next")}
+                  className={`cursor-pointer ${
+                    currentPage === totalPages ? "text-gray-400" : "text-black"
+                  }`}
+                />
+              </div>
+            </div>
+          </>
+        )}
+
+        <p className="text-black lg:mx-[5rem] mx-[2rem] mt-[2rem] text-[5rem] font-semibold font-serif">
+          {placeholderContent}
+        </p>
+        <BlogNav />
       </div>
-      <p className="text-black lg:mx-[5rem] mx-[2rem] mt-[2rem] text-[5rem] font-semibold font-serif">
-        {placeholderContent}
-      </p>
-      <BlogNav />
     </div>
   );
 };
