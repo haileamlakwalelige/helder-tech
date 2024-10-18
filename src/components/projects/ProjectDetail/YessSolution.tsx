@@ -2,7 +2,7 @@
 
 export default function YessSolution() {
   return (
-    <div className="flex text-black items-strat gap-10 font-medium">
+    <div className="lg:flex text-black items-strat gap-10 font-medium">
       <div>
         <div className="flex gap-5 items-start">
           <img src="/target.png" className="w-[2rem]" />
