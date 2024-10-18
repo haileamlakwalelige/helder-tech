@@ -22,6 +22,9 @@ const Navbar= () => {
      else if(location.pathname === "/mobile"){
       setColor(false);
     }
+    else if (location.pathname.startsWith("/projectdetail")) {
+      setColor(false);
+    }
      else {
       setColor(true);
     }

@@ -1,55 +1,62 @@
-import React from 'react'
-import helderlogo from '../../assets/helderlogo.png'
-import projecticon from '../../assets/projecticon.png'
-import pcicon from '../../assets/pcicon.png'
-import phoneicon from '../../assets/phoneicon.png'
-import { Link } from 'react-router-dom'
+import React from "react";
+import helderlogo from "../../assets/helderlogo.png";
+
+import { Link } from "react-router-dom";
 
 interface Card {
-    id:string
-    clientName:string
-    content:string
+  id: string;
+  clientName: string;
+  content: string;
+  serviceType: string[];
+  image: string;
 }
 
 interface CardProps {
-    currentProjects:Card[]
-    currentPage:number
+  currentProjects: Card[];
+  currentPage: number;
 }
 
-const ProjectCards: React.FC<CardProps> = ({currentProjects}) =>{
-    return(
-        <div>
-            {currentProjects.map((p)=>( 
-                <div key={p.id} className='flex flex-col md:flex-row border bg-white mb-4 rounded-[20px] mx-10 py-8'>
-                    <div className='basis-[55%]'>
-                        <img src={helderlogo} alt="" className='block px-1 size-36 -mt-6 ' />
-                        <div className='px-12 -mt-5 '>
-                            <h2 className='font-extrabold text-normalFont text-3xl pb-3'>{p.clientName}</h2>
-                            <p className='font-normal text-base text-justify' >{p.content}</p>
-                            <Link to={`/projectdetail/${p.id}`} className='text-titleFont font-normal text-base flex justify-end underline'>View</Link>
-                        </div>
+const ProjectCards: React.FC<CardProps> = ({ currentProjects }) => {
+  return (
+    <div>
+      {currentProjects.map((p) => (
+        <div
+          key={p.id}
+          className="flex flex-col md:flex-row border bg-white mb-4 rounded-[20px] mx-10"
+        >
+          <div className="basis-[85%]">
+            <img src={helderlogo} alt="" className="block px-1 size-36 mt-2 " />
+            <div className="px-12 -mt-5 ">
+              <h2 className="font-extrabold text-[#545454] text-3xl pb-3">
+                {p.clientName}
+              </h2>
+              <p className="font-normal text-base text-[#121212] text-justify">
+                {p.content}
+              </p>
+              <Link
+                to={`/projectdetail/${p.id}`}
+                className="text-titleFont font-normal text-base flex justify-end "
+              >
+                View more
+              </Link>
+            </div>
 
-                        <div className='text-normalFont px-12'>
-                            <h3 className='font-medium text-lg mb-2'>Services</h3>
-                            <div className='text-center flex justify-evenly items-center'>
-                                <p className=' border rounded-full font-normal text-base px-3 py-1'>Website</p>
-                                <p className=' border rounded-full font-normal text-base px-3 py-1'>Mobile App</p>
-                                <p className=' border rounded-full font-normal text-base px-3 py-1'>Production</p>
-                                <p className=' border rounded-full font-normal text-base px-3 py-1'>Digital Marketing</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div className='relative basis-[45%] flex ml-9 mt-14'>
-                        <img src={pcicon} alt="" className='mt-4 size-72 z-10'/>
-                        <img src={phoneicon} alt="" className='absolute left-2/4 bottom-[30%]'/>
-                        <img src={projecticon} alt="" className='absolute left-[38%] top-[60%] size-24 '/> 
-                    </div>
+            <div className="flex gap-6 mt-2 text-[#383838] px-12 py-2">
+              {p.serviceType.map((service, index) => (
+                <div className="text-sm border rounded-md p-1" key={index}>
+                  {service}
                 </div>
-            ))}
-        </div>
-    )
-}
+              ))}
+            </div>
+          </div>
 
-export default ProjectCards
+          <div className="relative basis-[45%] flex ml-9 mt-2">
+            <img src={p.image} className="max-w-[25rem]" alt={p.clientName} />
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default ProjectCards;

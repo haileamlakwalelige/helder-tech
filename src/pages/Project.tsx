@@ -6,7 +6,7 @@ import ProjectList from '../components/projects/ProjectList'
 const Project = () => {
   return (
     <div className='bg-[#E5FFDE]'>
-      <ProjectHero/>
+      {/* <ProjectHero/> */}
       <ProjectList/>
       
     </div>
